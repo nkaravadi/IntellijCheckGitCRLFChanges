@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.naga.ideaplugins.CheckGitCRLFChanges</id>
+
+    <name>CheckGitCRLFChanges</name>
+
+    <vendor email="naga.karavadi@gmail.com.com" url="https://www.yourcompany.com">Naga Karavadi</vendor>
+
+    <description><![CDATA[
+    This plugin adds a right-click menu item to revert CRLF-only changes in the Git change list view.
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="com.naga.ideaplugins.CheckGitCRLFChanges.RevertCRLFOnlyChangesAction"
+                class="com.naga.ideaplugins.CheckGitCRLFChanges.RevertCRLFOnlyChangesAction"
+                text="Revert CRLF Only Changes">
+            <add-to-group group-id="ChangesViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
